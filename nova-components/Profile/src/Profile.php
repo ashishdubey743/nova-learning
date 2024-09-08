@@ -28,8 +28,8 @@ class Profile extends Tool
      */
     public function menu(Request $request)
     {
-        return MenuSection::make('Profile')
-            ->path('/profile')
-            ->icon('server');
+        // return MenuSection::make('Profile')
+        //     ->path('/profile')
+        //     ->icon('server');
     }
 }

@@ -40,10 +40,15 @@
             placeholder="Enter your phone number" />
           <span v-if="formErrors.phone" class="text-red-500 text-sm">{{ formErrors.phone }}</span>
         </div>
-        <button type="button" @click="nextStep"
-          class="bg-green-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg w-full mt-4 shadow-lg transition-all duration-200 ease-in-out transform hover:scale-105">
-          Next
-        </button>
+
+        <!-- Add a flex container only around the button -->
+        <div class="flex justify-end">
+          <button type="button" @click="nextStep"
+            class="custom-blue-background hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg mt-4 shadow-lg transition-all duration-200 ease-in-out transform hover:scale-105">
+            Next
+          </button>
+        </div>
+
       </div>
 
       <!-- Step 2: Account Information -->
@@ -67,7 +72,8 @@
           <input v-model="formData.password_confirmation" type="password"
             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Confirm your password" />
-          <span v-if="formErrors.password_confirmation" class="text-red-500 text-sm">{{ formErrors.password_confirmation }}</span>
+          <span v-if="formErrors.password_confirmation" class="text-red-500 text-sm">{{ formErrors.password_confirmation
+            }}</span>
         </div>
         <div class="flex justify-between mt-4">
           <button type="button" @click="prevStep"
@@ -75,7 +81,7 @@
             Previous
           </button>
           <button type="button" @click="nextStep"
-            class="bg-green-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg">
+            class="custom-blue-background hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg">
             Next
           </button>
         </div>
@@ -112,7 +118,7 @@
             Previous
           </button>
           <button type="button" @click="nextStep"
-            class="bg-green-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg">
+            class="custom-blue-background hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg">
             Next
           </button>
         </div>
@@ -148,7 +154,7 @@
             class="bg-gray-300 hover:bg-gray-400 text-gray-700 font-semibold py-2 px-4 rounded-lg">
             Previous
           </button>
-          <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg">
+          <button type="submit" class="custom-blue-background hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg">
             Submit
           </button>
         </div>

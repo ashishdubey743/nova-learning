@@ -1,2 +1,8 @@
 /* Nova Tool CSS */
+.custom-blue-background {
+    background-color: rgba(var(--colors-primary-500));
+  }
 
+:root {
+    --colors-primary-500: 59, 130, 246; /* RGB value */
+}
